@@ -18,9 +18,12 @@ using space::records;
 
 
 void condition(char user) {
+    short int records_no;
 
-    if(user == 'Y')
-
+    if(user == 'Y') {
+    cout << "Do you want to increase the Records (y/n)";
+    cin >> records_no;
+    }
 
 }
 
