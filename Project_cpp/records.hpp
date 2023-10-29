@@ -1,5 +1,5 @@
 #include<iostream>
-using std::cout; using std::cin;
+using std::cout; using std::cin; using std::endl;
 
 namespace space {
     struct records
@@ -9,11 +9,12 @@ namespace space {
             "English","Math","Science"
             ,"Kannada","CS"
          }; 
-         int marks[5]; //! 50 to 100!
+         int marks[5]; //! 50 to 100! marks
+         short int rollnumber;
          char grade;
     };
     
-}
+} //Completed
 using space::records;
 
 
@@ -25,19 +26,32 @@ void condition(char user) {
     cin >> records_no;
     }
 
+    if(user2 == 'Y' or user2 == 'y') {
+       cout << "Enter the Number of records :: " ;
+       cin >> *user;
+    }
+
+    return *user;
 }
 
 void Records() {
-    short int user,*puser = &user;
-    //?int count = 0; Future use!
+    short int no_records,*puser = &no_records;
+    //int count = 0;// Future use!
     cout << "Enter the number of records :: ";
-    cin >> user;
-    records student[user];
+    cin >> no_records;
+    records student[no_records];
 
-    for (size_t i = 0; i < user; i++) {
-        if(user == i-1)
-        condition(user);
+    for (size_t i = 0; i < no_records; ++i) {
+        if(no_records-1 == i)
+        condition(puser);
+        
 
-    }
+        //Logic Code...
+        cout << "Enter student roll number :: ";
+        cin >> student[i].rollnumber;
     
+
+        //++count;
+    }
+    //cout << "The number of times :: " << count << endl;
 }
