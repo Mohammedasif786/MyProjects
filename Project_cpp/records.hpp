@@ -18,13 +18,13 @@ namespace space {
 using space::records;
 
 
-int condition(short int* user) {
-    char user2;
+void condition(char user) {
+    short int records_no;
 
-    cout << "Do you want to more records (y/n):: ";
-    cin >> user2;
-
-    fflush(stdin);
+    if(user == 'Y') {
+    cout << "Do you want to increase the Records (y/n)";
+    cin >> records_no;
+    }
 
     if(user2 == 'Y' or user2 == 'y') {
        cout << "Enter the Number of records :: " ;
