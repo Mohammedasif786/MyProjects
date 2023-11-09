@@ -18,20 +18,18 @@ namespace space {
 using space::records;
 
 
-void condition(char user) {
-    short int records_no;
+int condition(short int *no_records) {
+    char user2;
 
-    if(user == 'Y') {
     cout << "Do you want to increase the Records (y/n)";
-    cin >> records_no;
-    }
+    cin >> user2;
 
     if(user2 == 'Y' or user2 == 'y') {
        cout << "Enter the Number of records :: " ;
-       cin >> *user;
+       cin >> *no_records;
     }
 
-    return *user;
+    return *no_records;
 }
 
 void Records() {
@@ -44,7 +42,6 @@ void Records() {
     for (size_t i = 0; i < no_records; ++i) {
         if(no_records-1 == i)
         condition(puser);
-        
 
         //Logic Code...
         cout << "Enter student roll number :: ";
@@ -53,15 +50,12 @@ void Records() {
         cin >> student[i].student_name;
 
         short int subject_loop = 0;
-
-        do  {
+        
+         while (subject_loop != 5) {
            cout << student[subject_loop].subjects << " : ";
            cin >> student[subject_loop].marks[subject_loop];
            ++subject_loop; 
-        } while (subject_loop<5);
-        
-    
-
+         }
         //++count;
     }
     for(int i=0;i<5;++i) {
