@@ -18,7 +18,7 @@ namespace space {
 using space::records;
 
 
-void condition(char user) {
+void condition(short int* user2) {
     short int records_no;
 
     if(user == 'Y') {
