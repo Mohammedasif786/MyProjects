@@ -1,10 +1,10 @@
 #include<iostream>
-using std::cout; using std::cin; using std::endl;
+using std::cout; using std::cin; using std::endl; using std::string;
 
 namespace space {
     struct records
     {
-         char *student_name;
+         string student_name;
          char *subjects[5] = {
             "English","Math","Science"
             ,"Kannada","CS"
@@ -17,6 +17,40 @@ namespace space {
 } //Completed
 using space::records;
 
+void Grade(records stdGDR[],int loop) {
+        
+}
+
+void Average(records stdAVG[],int loop) {
+        static int sum,loop2 = 5,gained_marks,total;
+
+        for (size_t i = 0; i < loop2; i++) 
+            sum +=  stdAVG[loop].marks[loop2];
+
+        gained_marks = sum;
+
+        total = (gained_marks*100)/500;
+
+        cout << "Average marks :: " << total << endl;
+
+        Grade(stdAVG,loop);
+}
+
+void data_user(records std[],int loop) {
+
+        cout << "Roll number of Student :: ";
+        cin >> std[loop].rollnumber;
+        cout << "Name of Student :: ";
+        cin >> std[loop].student_name;
+        int len = 5; 
+        while (len--) {
+               cout << std[loop].subjects[len] << ": ";
+               cin >> std[loop].marks[len];
+        }
+
+        Average(std,loop);
+        
+}
 
 int condition(short int *no_records) {
     char user2;
@@ -33,34 +67,23 @@ int condition(short int *no_records) {
 }
 
 void Records() {
-    short int no_records,*puser = &no_records;
-    //int count = 0;// Future use!
+    short int no_records = 10,*puser = &no_records;
+    records student[no_records];
+    int count = 0;// Future use!
+
     cout << "Enter the number of records :: ";
     cin >> no_records;
-    records student[no_records];
 
-    for (size_t i = 0; i < no_records; ++i) {
-        if(no_records-1 == i)
+    for (size_t i = 0; i < no_records; i++) {
+             //Logic Code...
+        data_user(student,i);
+      
+       ++count;
+    
+     if(no_records-1 == i)
         condition(puser);
 
-        //Logic Code...
-        cout << "Enter student roll number :: ";
-        cin >> student[i].rollnumber;
-        cout << "Name of Student :: ";
-        cin >> student[i].student_name;
-
-        short int subject_loop = 0;
-        
-         while (subject_loop != 5) {
-           cout << student[subject_loop].subjects << " : ";
-           cin >> student[subject_loop].marks[subject_loop];
-           ++subject_loop; 
-         }
-        //++count;
-    }
-    for(int i=0;i<5;++i) {
-        cout << student[i].subjects << ": " << student[i].marks[i] << endl;
     }
 
-    //cout << "The number of times :: " << count << endl;
+    cout << "The number of times :: " << count << endl;
 }
