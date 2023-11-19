@@ -1,4 +1,7 @@
 #include<iostream>
+#include<memory>
+#include "dsa.hpp"
+
 using std::cout; using std::cin; using std::endl; using std::string;
 
 namespace space {
@@ -17,23 +20,47 @@ namespace space {
 } //Completed
 using space::records;
 
-void Grade(records stdGDR[],int loop) {
+void Grade(int loop,int* pavg) {
+    if (*pavg == 0 or *pavg <=49)
+    {
+        cout << "The Grade is :: " << 'F' << endl;
+    }
+    else if(*pavg  == 50 or *pavg <= 59) {
+        cout << "The Grade is :: " << 'D' << endl;
+
+    } else if(*pavg == 60 or *pavg <= 66) {
+        cout << "The Grade is :: " << 'C' << endl;
+
+    } else if(*pavg == 67 or *pavg <= 70) {
+        cout << "The Grade is :: " << 'B' << endl;
+
+    } else if(*pavg == 71 or *pavg <= 80) {
+        cout << "The Grade is :: " << "B+" << endl;
+
+    } else if(*pavg == 81 or *pavg <= 86) {
+        cout << "The Grade is :: " << 'A' << endl;
+
+    } else if(*pavg == 87 or *pavg <= 97) {
+        cout << "The Grade is :: " << "A+" << endl;
+
+    } else if(*pavg >= 98) {
+        cout << "The Grade is :: " << 'O' << endl;
+    }
         
 }
 
 void Average(records stdAVG[],int loop) {
-        static int sum,loop2 = 5,gained_marks,total;
+        static int sum,loop2 = 5,avg = 0,Subjects = 5;
+        int* ptr_avg = &avg;
 
-        for (size_t i = 0; i < loop2; i++) 
-            sum +=  stdAVG[loop].marks[loop2];
+        for (size_t times = 0; times < loop2; times++) 
+          sum += stdAVG[loop].marks[times];
+        
+        avg = sum/Subjects;
+        
+        cout << "Average marks :: " << avg << endl;
 
-        gained_marks = sum;
-
-        total = (gained_marks*100)/500;
-
-        cout << "Average marks :: " << total << endl;
-
-        Grade(stdAVG,loop);
+        Grade(loop,ptr_avg);
 }
 
 void data_user(records std[],int loop) {
@@ -42,10 +69,13 @@ void data_user(records std[],int loop) {
         cin >> std[loop].rollnumber;
         cout << "Name of Student :: ";
         cin >> std[loop].student_name;
-        int len = 5; 
+
+        int len = 5,sub = 0; 
+
         while (len--) {
-               cout << std[loop].subjects[len] << ": ";
-               cin >> std[loop].marks[len];
+               cout << std[loop].subjects[sub] << ": ";
+               cin >> std[loop].marks[sub];
+               sub++;
         }
 
         Average(std,loop);
@@ -55,7 +85,7 @@ void data_user(records std[],int loop) {
 int condition(short int *no_records) {
     char user2;
 
-    cout << "Do you want to increase the Records (y/n)";
+    cout << "Do you want to increase the Records (y/n) :: ";
     cin >> user2;
 
     if(user2 == 'Y' or user2 == 'y') {

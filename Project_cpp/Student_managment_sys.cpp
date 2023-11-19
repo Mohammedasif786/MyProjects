@@ -9,7 +9,7 @@ using std::cout; using std::cin; using std::string;
 
 void logo() {
         cout << "\t\t\t================================" << endl;
-        cout << "\t\t\t| Student Managment System |" << endl;
+        cout << "\t\t\t | Student Managment System |" << endl;
         cout << "\t\t\t================================" << endl;
 }
 
