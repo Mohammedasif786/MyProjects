@@ -1,6 +1,5 @@
 #include<iostream>
-#include<memory>
-#include "dsa.hpp"
+#include "dsa.cpp"
 
 using std::cout; using std::cin; using std::endl; using std::string;
 

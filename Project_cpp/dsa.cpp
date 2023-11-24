@@ -1,11 +1,10 @@
 #include <iostream>
 #include <cstdlib>
 #include "insertion_student_MS.hpp"
+//?#include "delection_student_MS.hpp" Future!
+//?#include "Searching_student_MS.hpp" 
 
 using namespace std;
-void beginning();
-void middle();
-void end();
 
 void insert_record() {
     int user;
@@ -49,6 +48,10 @@ void insert_record() {
     }
     
 }
-void del_record(); 
+void del_record()  {
+    cout << "Here del_records --here--";
+}
 
-void search_record(); 
+void search_record() {
+    cout << "Here search_records --here--";
+} 

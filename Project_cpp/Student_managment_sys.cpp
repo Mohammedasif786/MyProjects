@@ -2,9 +2,9 @@
 #include<cstring>
 #include<cstdlib>
 #include "records.hpp"
-#include "dsa.hpp"
 #define endl "\n"
 #define NL cout << endl;
+
 using std::cout; using std::cin; using std::string;
 
 void logo() {
