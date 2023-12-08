@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stdlib.h>
 using std::cout; using std::cin; using std::endl; using std::string;
 
 namespace space {
@@ -18,20 +19,23 @@ namespace space {
 using space::records;
 
 void Grade(records stdGDR[],int loop) {
-        
+       //code... 
 }
 
 void Average(records stdAVG[],int loop) {
-        static int sum,loop2 = 5,gained_marks,total;
+        int sum,loop2 = 5,subjects = 5;
+        register float avg = 0.00;
 
         for (size_t i = 0; i < loop2; i++) 
             sum +=  stdAVG[loop].marks[loop2];
 
-        gained_marks = sum;
+        for(int i=0;i<loop2;++i)
+        cout << stdAVG[loop].marks[loop2] << endl;
 
-        total = (gained_marks*100)/500;
+        avg =  sum/subjects;
+        //total = (gained_marks*100)/500;
 
-        cout << "Average marks :: " << total << endl;
+        cout << "Average marks :: " << avg << endl;
 
         Grade(stdAVG,loop);
 }
@@ -67,6 +71,7 @@ int condition(short int *no_records) {
 }
 
 void Records() {
+    system("cls");
     short int no_records = 10,*puser = &no_records;
     records student[no_records];
     int count = 0;// Future use!
