@@ -3,7 +3,7 @@
 
 using std::cout; using std::cin; using std::endl; using std::string;
 
-namespace space {
+/*namespace space {
     struct records
     {
          string student_name;
@@ -17,7 +17,9 @@ namespace space {
     };
     
 } //Completed
-using space::records;
+using space::records;*/
+
+
 
 void Grade(int loop,int* pavg) {
     if (*pavg == 0 or *pavg <=49)
@@ -95,10 +97,11 @@ int condition(short int *no_records) {
     return *no_records;
 }
 
-void Records() {
+int Records() {
+    system("cls");
     short int no_records = 10,*puser = &no_records;
     records student[no_records];
-    int count = 0;// Future use!
+    int count = 0;
 
     cout << "Enter the number of records :: ";
     cin >> no_records;
@@ -113,6 +116,6 @@ void Records() {
         condition(puser);
 
     }
-
     cout << "The number of times :: " << count << endl;
+    return no_records;
 }

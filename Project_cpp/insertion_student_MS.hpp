@@ -1,9 +1,12 @@
 #include<iostream>
 using std::cout; using std::cin; using std::string; using std::endl;
 
-void beginning() {
+void beginning(int size) {
     //*code here
-    cout << "I am here of beginning ::" << endl;
+    cout << size;
+    records student[size];
+    
+
 }
 
 void middle() {

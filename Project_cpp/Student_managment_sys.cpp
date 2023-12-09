@@ -15,6 +15,7 @@ void logo() {
 
 int main() {
     short int choice;
+    size_t size;
 
     while (true)
     {
@@ -34,11 +35,11 @@ int main() {
         switch (choice)
         {
         case 1:
-            Records();
+           size = Records();
             break;
 
         case 2:
-            insert_record();
+            insert_record(size);
             break;
 
         case 3:
