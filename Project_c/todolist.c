@@ -4,11 +4,11 @@
 #define true 1
 
 int main() {
-    struct list l1;
+    struct list l1,*ptr;
 
     while (true)
     {
-        system("cls");
+        //system("cls");
         printf("\t\t\t      TO-DO-LIST (A)\n");
         printf("\t\t\t=======================\n");
         printf("\t\t\t1.Add task<checklist> \n");
@@ -22,11 +22,11 @@ int main() {
         switch (l1.no_list)
         {
         case 1:
-            Add();
+            ptr = Add();
             break;
 
         case 2:
-            show();
+            show(ptr);
             break;
 
         case 3:

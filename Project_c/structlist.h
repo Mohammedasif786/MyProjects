@@ -4,9 +4,9 @@
 struct list  {
     char* task[size];
     int no_list;
-    FILE *fp;
+    //FILE *fp;
     struct user {
-        size_t user_ask;
+        int user_ask;
     }u1;
 };
 

@@ -4,7 +4,7 @@ using std::cout; using std::cin; using std::string; using std::endl;
 void beginning(int size) {
     //*code here
     cout << size;
-    records student[size];
+    space::records student[size];
     
 
 }
