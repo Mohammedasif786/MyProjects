@@ -1,5 +1,3 @@
-#include<iostream>
-
 namespace space {
     struct records
     {
@@ -11,6 +9,7 @@ namespace space {
          int marks[5]; //! 50 to 100! marks
          short int rollnumber;
          char grade;
+         size_t size;
     };
     
 } //Completed

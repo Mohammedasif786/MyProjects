@@ -1,26 +1,4 @@
-//records.hpp
-#include<iostream>
-#include "dsa.cpp"
-
-using std::cout; using std::cin; using std::endl; using std::string;
-
-/*namespace space {
-    struct records
-    {
-         string student_name;
-         char *subjects[5] = {
-            "English","Math","Science"
-            ,"Kannada","CS"
-         }; 
-         int marks[5]; //! 50 to 100! marks
-         short int rollnumber;
-         char grade;
-    };
-    
-} //Completed
-using space::records;*/
-
-
+using std::cout; using std::cin; using std::string; using std::endl;
 
 void Grade(int loop,int* pavg) {
     if (*pavg == 0 or *pavg <=49)
@@ -98,10 +76,10 @@ int condition(short int *no_records) {
     return *no_records;
 }
 
-int Records() {
+records* Records() {
     system("cls");
     short int no_records = 10,*puser = &no_records;
-    records student[no_records];
+    records student[no_records],*ptr = &student[no_records];
     int count = 0;
 
     cout << "Enter the number of records :: ";
@@ -118,5 +96,5 @@ int Records() {
 
     }
     cout << "The number of times :: " << count << endl;
-    return no_records;
+    return ptr;
 }

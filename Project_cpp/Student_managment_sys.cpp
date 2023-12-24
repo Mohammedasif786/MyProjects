@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cstring>
 #include<cstdlib>
-#include "records.hpp"
+#include "Allparts.hpp"
 #define endl "\n"
 #define NL cout << endl;
 
@@ -15,8 +15,8 @@ void logo() {
 
 int main() {
     short int choice;
-    size_t size;
-
+    records stud1,*student_pointer = &stud1;
+    
     while (true)
     {
         logo();
@@ -35,11 +35,11 @@ int main() {
         switch (choice)
         {
         case 1:
-           size = Records();
+           student_pointer = Records();
             break;
 
         case 2:
-            insert_record(size);
+            insert_record(student_pointer);
             break;
 
         case 3:

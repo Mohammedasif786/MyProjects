@@ -1,15 +1,8 @@
-//#pragma once
-#include <iostream>
-#include <cstdlib>
-#include "insertion_student_MS.hpp"
-#include "prototype.hpp"
-#include "studclasses.hpp"
 //?#include "delection_student_MS.hpp" Future!
 //?#include "Searching_student_MS.hpp" 
+#include "insertion_student_MS.hpp"
 
-using namespace std;
-
-void insert_record(int size) {
+void insert_record(records *student_ptr) {
     int user;
 
     while (true)
@@ -26,7 +19,7 @@ void insert_record(int size) {
         switch(user) 
         {
         case 1:
-        beginning(size);
+        beginning(student_ptr);
         break;
         
         case 2:
@@ -56,6 +49,5 @@ void del_record()  {
 }
 
 void search_record() {
-    space::records stud[4];
 
 } 

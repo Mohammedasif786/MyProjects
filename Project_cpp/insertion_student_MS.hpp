@@ -1,11 +1,6 @@
-#include<iostream>
-using std::cout; using std::cin; using std::string; using std::endl;
 
-void beginning(int size) {
+void beginning(records* student_ptr) {
     //*code here
-    cout << size;
-    space::records student[size];
-    
 
 }
 
