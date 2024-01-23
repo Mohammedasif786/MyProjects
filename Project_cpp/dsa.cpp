@@ -23,11 +23,11 @@ void insert_record(records *student_ptr) {
         break;
         
         case 2:
-        middle();
+        middle(student_ptr);
         break;
 
         case 3:
-        end();
+        end(student_ptr);
         break; 
 
         /*case 4:
@@ -44,8 +44,42 @@ void insert_record(records *student_ptr) {
     }
     
 }
-void del_record()  {
-    cout << "Here del_records --here--";
+void del_record(records* student_ptr)  {
+    /*int user;
+
+    while (true)
+    {
+        system("cls");
+        cout << "1.Beginning delection on table" << endl;
+        cout << "2.middle delection on table" << endl;
+        cout << "3.end delection on table" << endl;
+        cout << "4.exit insertion on table" << endl << endl;
+        cout <<"Enter you choice (1/2/3/4) ::";
+        cin >> user;
+
+        switch(user) 
+        {
+        case 1:
+        beginning(student_ptr);
+        break;
+        
+        case 2:
+        middle();
+        break;
+
+        case 3:
+        end();
+        break; 
+
+        case 4:
+        exit(0);
+        
+        default:
+        cout << "Wrong input 404!";
+            break;
+        }
+    }*/
+    
 }
 
 void search_record() {

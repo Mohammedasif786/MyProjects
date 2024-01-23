@@ -43,7 +43,7 @@ int main() {
             break;
 
         case 3:
-            del_record();
+            del_record(student_pointer);
             break;
 
         case 4:
