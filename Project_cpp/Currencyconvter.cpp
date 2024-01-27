@@ -32,46 +32,69 @@ public:
         switch (user)
         {
             system("cls");
+
          case 1:
             cout << "Enter the Dollar to Convert Rupees :: ";
             cin >> money,foren_money = 0.012;
             amount = money/foren_money; 
             cout << "Dollar Converted into Rupees(INR) :: " << amount << endl << endl; 
+            system("pause");
             break;
 
          case 2:
+            cout << "Enter the Euro to Convert Rupees :: ";
+            cin >> money,foren_money = 0.01106929378;
             amount = money/foren_money; 
-            cout << "Dollar Converted into Rupees(INR) :: " << amount;
+            cout << "Euro Converted into Rupees(INR) :: " << amount << endl << endl;
+            system("pause");
             break;
 
          case 3:
+            cout << "Enter the Japanese(YEN) to Convert Rupees :: ";
+            cin >> money,foren_money = 1.78;
             amount = money/foren_money; 
-            cout << "Dollar Converted into Rupees(INR) :: " << amount;
-            
+            cout << "YEN Converted into Rupees(INR) :: " << amount << endl << endl;
+            system("pause");
             break;
+
          case 4:
+            cout << "Enter the Pound to Convert Rupees :: ";
+            cin >> money,foren_money = 0.0094;
             amount = money/foren_money; 
-            cout << "Dollar Converted into Rupees(INR) :: " << amount;
-            
+            cout << "Pound Converted into Rupees(INR) :: " << amount << endl << endl;
+            system("pause");
             break;
+
          case 5:
+            cout << "Enter the Dollar to Convert YEN :: ";
+            cin >> money,foren_money = 0.0068;
             amount = money/foren_money; 
-            cout << "Dollar Converted into Rupees(INR) :: " << amount;
-            
+            cout << "Dollar Converted into Japanese(YEN) :: " << amount << endl << endl;
+            system("pause");
             break;
+
          case 6:
+            cout << "Enter the Rupees to Convert YEN :: ";
+            cin >> money,foren_money = 0.56;
             amount = money/foren_money; 
-            cout << "Dollar Converted into Rupees(INR) :: " << amount;
-            
+            cout << "Rupees Converted into Japanese(YEN) :: " << amount << endl << endl;
+            system("pause");
             break;
+
          case 7:
+            cout << "Enter the Rupees to Convert Pound :: ";
+            cin >> money,foren_money = 105.94;
             amount = money/foren_money; 
-            cout << "Dollar Converted into Rupees(INR) :: " << amount;
-            
+            cout << "Dollar Converted into Pound :: " << amount << endl << endl;
+            system("pause");
             break;
+
          case 8:
+            cout << "Enter the Rupees to Convert Dollar :: ";
+            cin >> money,foren_money = 83.12;
             amount = money/foren_money; 
-            cout << "Dollar Converted into Rupees(INR) :: " << amount;
+            cout << "Rupees Converted into Dollar :: " << amount << endl << endl;
+            system("pause");
             break;
 
          case 9:
