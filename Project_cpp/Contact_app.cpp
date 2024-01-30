@@ -27,14 +27,17 @@ public:
 
      void add() {
         info first[size];
-        int total;
+        static int total,data;
+        char user;
 
+        while(true) {
+        if(total == 0)  {
         cout << "How many contact you want to add! :: ";
         cin >> user_choice;
 
+        data = user_choice;
         total += user_choice;
 
-        if(user_choice == 0) {
         for(int i=0;i<user_choice;++i) {
         cout << "Enter you First name :: ";
         cin >> first[i].first_name;
@@ -50,7 +53,12 @@ public:
         cin >> first[i].country;
     }
     } else {
-       for(int i=total;i<total+user_choice;++i) {
+        cout << "How many contact you want to add!(Update or append or Joint) :: ";
+        cin >> user_choice;
+
+        total += user_choice;
+
+       for(int i=data;i<total;++i) {
         cout << "Enter you First name :: ";
         cin >> first[i].first_name;
         cout << "Enter you last name :: ";
@@ -63,12 +71,20 @@ public:
         cin >> first[i].phone_no;
         cout << "Enter your Country :: ";
         cin >> first[i].country;
+        cout << endl;
+        }
+        cout << "Total contact added in database :: " << total << endl;
+        system("pause");
+        cout << endl << endl;
     }
-
-    }
+    cout << "Do you need more Contact add?(y/n) :: ";
+    cin >> user;
+    if(user == 'n' or user == 'N')
+        break;
+}
         //? User pointer to return the main information to other used to perfom operation!
         //! or Leave because we inside the class not the oustide the Class
-    }
+}
     void display() {
 
     }
