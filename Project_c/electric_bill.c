@@ -1,29 +1,19 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
 #include "electric_bill.h"
 
-struct electric_bill {
-    float khw,hp;
-    int watt;
-}el,*ptr = &el;
-
+//*Complete this function of Beginning...
 void logo() {
-    system("cls");
-    printf("\t\t[=======================]\n");
-    printf("\t\t^ Electric bill by Asif\t^\n");
-    printf("\t\t[=======================]\n");
-    printf("\n\n");
+    //
 }
-
-
 int main(int argc,char** argv) {
     short int user;
     while (1)
     {
         logo();
-        printf("[1].Calculation\n");
-        printf("[2].Bill records\n");
+        printf("[1].Calculator\n");
+        printf("[2].Bill Records\n");
         printf("[3].Exit\n");
         printf("Enter you choice :: ");
         scanf("%d",&user);
@@ -34,14 +24,14 @@ int main(int argc,char** argv) {
             break;
 
         case 2:
-            Bill_rec();
+            Bill_Rec();
             break;
 
         case 3:
-        exit(0);
-        
+            exit(0);
+     
         default:
-        perror("\nInvalid type try again!\n");
+        perror("Please Try a valid Entry!");
             break;
         }
     }
